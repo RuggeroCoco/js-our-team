@@ -33,6 +33,18 @@ const ourTeam = [
     img: "barbara-ramos-graphic-designer.jpg",
   },
 ];
-// MILESTONE 1:
-// Stampare su console le informazioni di nome, ruolo e la stringa della foto
-console.log(ourTeam);
+
+// BONUS 1
+
+const teamList = document.querySelector("ul");
+
+for (let i = 0; i < ourTeam.length; i++) {
+  const member = ourTeam[i];
+  teamList.innerHTML += `
+    <li>
+        <h2>${member.name}</h2>
+        <p>${member.role}</p>
+        <img src="assets/${member.img}" alt="${member.name}">
+    </li>
+    `;
+}
